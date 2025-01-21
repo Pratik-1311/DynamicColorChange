@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            background-color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 1rem;
+            cursor: pointer;
+            
+        }
+        body{
+            height: 100vh;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+    </style>
+</head>
+<body>
+    <button>click here</button>
+
+    <script>
+        let btn = document.querySelector('button')
+        btn.onclick = () => {
+            // document.body.style.backgroundColor ="yellow"
+            let chars = "0123456789abcdef"
+            let hexcode= "#"
+            for(let i=1;i<=6;i++){
+                let r_num = Math.round(Math.random() * 15)
+                hexcode += chars[r_num]
+            }
+            document.body.style.backgroundColor = hexcode
+        }
+    </script>
+</body>
+</html>
